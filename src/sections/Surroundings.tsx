@@ -180,7 +180,7 @@ export const Surroundings = () => {
                   </button>
 
                   {/* Mobile Accordion Content (Visible only when active on small screens) */}
-                  <div className={`lg:hidden overflow-hidden transition-all duration-500 bg-dark/30 border-x border-b border-gold/20 ${category.id === activeCategory.id ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 border-none'
+                  <div className={`lg:hidden overflow-hidden transition-all duration-500 bg-dark/95 backdrop-blur-sm border-x border-b border-gold/20 ${category.id === activeCategory.id ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 border-none'
                     }`}>
                     <div className="p-6 space-y-4">
                       <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
