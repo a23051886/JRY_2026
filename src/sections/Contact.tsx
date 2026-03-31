@@ -33,9 +33,9 @@ export const Contact = () => {
 
     try {
       const submissionData = {
-        project: '仁愛玉璽',
+        project: '仁�??�璽',
         name: formData.name.trim(),
-        gender: formData.gender === 'male' ? '男' : '女',
+        gender: formData.gender === 'male' ? '?? : '�?,
         phone: formData.phone.trim(),
         email: formData.email.trim(),
         message: formData.message.trim(),
@@ -51,7 +51,7 @@ export const Contact = () => {
       setIsSubmitted(true);
     } catch (error: any) {
       console.error('Submission error:', error);
-      alert('送出失敗: ' + (error.message || '未知錯誤'));
+      alert('?�出失�?: ' + (error.message || '?�知?�誤'));
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +65,7 @@ export const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative min-h-screen w-full py-32 overflow-hidden"
+      className="relative min-h-[100dvh] w-full py-32 overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">
@@ -82,9 +82,9 @@ export const Contact = () => {
         >
           <span className="text-gold text-sm tracking-[0.3em] mb-4 block">CONTACT</span>
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-text-primary mb-4">
-            預約賞屋
+            ?��?賞�?
           </h2>
-          <p className="text-text-secondary">誠摯邀請您親臨鑑賞</p>
+          <p className="text-text-secondary">誠摯?�請您親臨?��?</p>
         </div>
 
         {/* Content grid */}
@@ -96,7 +96,7 @@ export const Contact = () => {
           {/* Left: Contact info */}
           <div className="space-y-8">
             <div className="p-8 border border-gold/30 bg-dark/50">
-              <h3 className="font-serif text-2xl text-text-primary mb-6">聯絡資訊</h3>
+              <h3 className="font-serif text-2xl text-text-primary mb-6">?�絡資�?</h3>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -104,7 +104,7 @@ export const Contact = () => {
                     <Phone className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <span className="text-gold/60 text-xs tracking-[0.15em] block mb-1">服務專線</span>
+                    <span className="text-gold/60 text-xs tracking-[0.15em] block mb-1">?��?專�?</span>
                     <span className="text-text-primary text-lg">(02) 2236-1566</span>
                   </div>
                 </div>
@@ -114,8 +114,8 @@ export const Contact = () => {
                     <MapPin className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <span className="text-gold/60 text-xs tracking-[0.15em] block mb-1">接待中心</span>
-                    <span className="text-text-primary">台北市文山區木柵路一段 83 號一樓</span>
+                    <span className="text-gold/60 text-xs tracking-[0.15em] block mb-1">?��?中�?</span>
+                    <span className="text-text-primary">?��?市�?山�??�柵路�?�?83 ?��?�?/span>
                   </div>
                 </div>
 
@@ -124,24 +124,21 @@ export const Contact = () => {
 
             {/* Business hours */}
             <div className="p-8 border border-gold/20 bg-dark/30">
-              <h4 className="font-serif text-lg text-text-primary mb-4">接待時間</h4>
+              <h4 className="font-serif text-lg text-text-primary mb-4">?��??��?</h4>
               <div className="space-y-4 text-text-secondary text-sm">
                 <div className="flex justify-between items-center border-b border-gold/10 pb-2">
-                  <span>週一至週五</span>
+                  <span>?��??�週�?</span>
                   <span className="text-text-primary">09:00 - 12:00 / 13:30 - 18:00</span>
                 </div>
                 <div className="bg-gold/5 p-3 text-xs border border-gold/10 italic">
-                  ※ 例假日及國定假日未營業
-                </div>
+                  ??例�??��??��??�日?��?�?                </div>
               </div>
             </div>
 
             {/* Note */}
             <div className="p-6 bg-gold/5 border-l-2 border-gold">
               <p className="text-text-secondary text-sm leading-relaxed">
-                ※ 為提供您專屬的賞屋服務，建議提前預約，
-                我們將安排專人為您詳細介紹。
-              </p>
+                ???��?供您專屬?��?屋�??��?建議?��??��?�?                ?�們�?安�?專人?�您詳細介紹??              </p>
             </div>
           </div>
 
@@ -152,10 +149,9 @@ export const Contact = () => {
                 <div className="w-16 h-16 flex items-center justify-center border border-gold bg-gold/10 mb-6">
                   <Check className="w-8 h-8 text-gold" />
                 </div>
-                <h3 className="font-serif text-2xl text-text-primary mb-4">預約成功</h3>
+                <h3 className="font-serif text-2xl text-text-primary mb-4">?��??��?</h3>
                 <p className="text-text-secondary mb-6">
-                  感謝您的預約，我們將盡快與您聯繫確認賞屋時間。
-                </p>
+                  ?��??��??��?，�??��??�快?�您?�繫確�?賞�??��???                </p>
                 <button
                   onClick={() => {
                     setIsSubmitted(false);
@@ -170,7 +166,7 @@ export const Contact = () => {
                   }}
                   className="text-gold hover:text-gold-light transition-colors"
                 >
-                  再次預約
+                  ?�次?��?
                 </button>
               </div>
             ) : (
@@ -179,7 +175,7 @@ export const Contact = () => {
                   {/* Name */}
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-text-secondary text-sm">
-                      貴賓大名 <span className="text-gold">*</span>
+                      貴�?大�? <span className="text-gold">*</span>
                     </Label>
                     <Input
                       id="name"
@@ -187,13 +183,13 @@ export const Contact = () => {
                       onChange={(e) => handleChange('name', e.target.value)}
                       required
                       className="bg-transparent border-0 border-b border-gold/30 rounded-none focus:border-gold focus-visible:ring-0 focus-visible:ring-offset-0 text-text-primary placeholder:text-text-secondary/50"
-                      placeholder="請輸入姓名"
+                      placeholder="請輸?��???
                     />
                   </div>
 
                   {/* Gender */}
                   <div className="space-y-2">
-                    <Label className="text-text-secondary text-sm">稱謂</Label>
+                    <Label className="text-text-secondary text-sm">稱�?</Label>
                     <RadioGroup
                       value={formData.gender}
                       onValueChange={(value) => handleChange('gender', value)}
@@ -201,11 +197,11 @@ export const Contact = () => {
                     >
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="male" id="male" className="border-gold/50 text-gold" />
-                        <Label htmlFor="male" className="text-text-secondary cursor-pointer">先生</Label>
+                        <Label htmlFor="male" className="text-text-secondary cursor-pointer">?��?</Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="female" id="female" className="border-gold/50 text-gold" />
-                        <Label htmlFor="female" className="text-text-secondary cursor-pointer">小姐</Label>
+                        <Label htmlFor="female" className="text-text-secondary cursor-pointer">小�?</Label>
                       </div>
                     </RadioGroup>
                   </div>
@@ -214,7 +210,7 @@ export const Contact = () => {
                 {/* Phone */}
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="text-text-secondary text-sm">
-                    手機號碼 <span className="text-gold">*</span>
+                    ?��??�碼 <span className="text-gold">*</span>
                   </Label>
                   <Input
                     id="phone"
@@ -223,14 +219,14 @@ export const Contact = () => {
                     onChange={(e) => handleChange('phone', e.target.value)}
                     required
                     className="bg-transparent border-0 border-b border-gold/30 rounded-none focus:border-gold focus-visible:ring-0 focus-visible:ring-offset-0 text-text-primary placeholder:text-text-secondary/50"
-                    placeholder="請輸入手機號碼"
+                    placeholder="請輸?��?機�?�?
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-text-secondary text-sm">
-                    電子信箱
+                    ?��?信箱
                   </Label>
                   <Input
                     id="email"
@@ -238,14 +234,14 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     className="bg-transparent border-0 border-b border-gold/30 rounded-none focus:border-gold focus-visible:ring-0 focus-visible:ring-offset-0 text-text-primary placeholder:text-text-secondary/50"
-                    placeholder="請輸入電子信箱"
+                    placeholder="請輸?�電子信�?
                   />
                 </div>
 
                 {/* Message */}
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-text-secondary text-sm">
-                    備註訊息
+                    ?�註訊息
                   </Label>
                   <Textarea
                     id="message"
@@ -253,7 +249,7 @@ export const Contact = () => {
                     onChange={(e) => handleChange('message', e.target.value)}
                     rows={4}
                     className="bg-transparent border border-gold/30 rounded-none focus:border-gold focus-visible:ring-0 focus-visible:ring-offset-0 text-text-primary placeholder:text-text-secondary/50 resize-none"
-                    placeholder="請輸入您想了解的資訊或希望的賞屋時間"
+                    placeholder="請輸?�您?��?�??資�??��??��?賞�??��?"
                   />
                 </div>
 
@@ -266,10 +262,8 @@ export const Contact = () => {
                     className="border-gold/50 data-[state=checked]:bg-gold data-[state=checked]:border-gold mt-1"
                   />
                   <Label htmlFor="agree" className="text-text-secondary text-sm cursor-pointer leading-relaxed flex items-center flex-wrap">
-                    我已詳閱並同意
-                    <button type="button" onClick={() => setShowPrivacy(true)} className="text-gold hover:underline mx-1">隱私權政策</button>
-                    ，同意貴公司收集及使用本人的個人資料。
-                  </Label>
+                    ?�已詳閱並�???                    <button type="button" onClick={() => setShowPrivacy(true)} className="text-gold hover:underline mx-1">?��?權政�?/button>
+                    ，�??�貴?�司?��??�使?�本人�??�人資�???                  </Label>
                 </div>
 
                 {/* Submit */}
@@ -285,7 +279,7 @@ export const Contact = () => {
                     <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
                   ) : (
                     <>
-                      <span>送出預約</span>
+                      <span>?�出?��?</span>
                       <Send className="w-4 h-4" />
                     </>
                   )}
@@ -293,8 +287,7 @@ export const Contact = () => {
 
                 {/* Disclaimer */}
                 <p className="text-text-secondary/50 text-xs text-center">
-                  ※ 網站內容為3D渲染情境示意圖，實際以現場公布為準，113建字第0069號。
-                </p>
+                  ??網�??�容??D渲�??��?示�??��?實�?以現?�公布為準�?113建�?�?069?��?                </p>
               </form>
             )}
           </div>
@@ -316,13 +309,13 @@ export const Contact = () => {
             >
               <X className="w-6 h-6" />
             </button>
-            <h3 className="font-serif text-2xl text-gold mb-6 pb-4 border-b border-gold/20">個人資料保護政策暨隱私權聲明</h3>
+            <h3 className="font-serif text-2xl text-gold mb-6 pb-4 border-b border-gold/20">?�人資�?保護?��??�隱私�??��?</h3>
             <div className="space-y-4 text-text-secondary text-sm leading-relaxed">
-              <p>歡迎您瀏覽使用本網站，琢樸建設有限公司（以下稱「本公司」）尊重並保護您的隱私權。為了幫助您瞭解本網站如何蒐集、處理及利用您的個人資料，請您於填寫個人資料前，請務必詳細閱讀本網站的「隱私權聲明」。若您勾選「同意」，即表示您並同意本公司依下列條款蒐集、處理、使用您於本網站提供之個人資料。</p>
-              <p><strong className="text-text-primary block mb-1">一、適用範圍</strong>本公司「隱私權聲明」適用於您使用本網站各項服務需填寫之資料，所涉及之個人資料蒐集、處理與利用行為。您瞭解此一同意符合個人資料保護法及相關法規之要求，具有書面同意本公司蒐集、處理及利用您的個人資料之效果。</p>
-              <p><strong className="text-text-primary block mb-1">二、個人資料的蒐集、處理及利用方式</strong>當您使用本網站時，本公司為了解使用者需求與喜好，以便提供更好的服務，需請您提供以下個人資料：姓名、出生年月日、連絡方式(包括但不限於電話號碼、E-MAIL或居住地址)或其他得以直接或間接識別您個人之資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本公司不會將個人資料用於其他用途。</p>
-              <p><strong className="text-text-primary block mb-1">三、第三人使用個人資料之限制</strong>本公司絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。</p>
-              <p><strong className="text-text-primary block mb-1">四、cookie 之運用</strong>基於網站內部管理之需要及提供最佳個人化服務，本公司網站將在您的瀏覽器中寫入 cookies 並讀取記錄瀏覽者的 IP 位址、上網時間以及在各項資訊查閱之次數，進行網站流量和網路行為調查之總量分析，不會對「個別」瀏覽者進行分析。</p>
+              <p>歡�??�瀏覽使用?�網站�??�樸建設?��??�司（以下稱?�本?�司?��?尊�?並�?護您?�隱私�??�為了幫?�您?�解?�網站�?何�??�、�??��??�用?��??�人資�?，�??�於填寫?�人資�??��?請�?必詳細閱讀?�網站�??�隱私�??��??�。若?�勾?�「�??�」�??�表示您並�??�本?�司依�??��?款�??�、�??�、使?�您?�本網�??��?之個人資�???/p>
+              <p><strong className="text-text-primary block mb-1">一?�適?��???/strong>?�公?�「隱私�??��??�適?�於?�使?�本網�??��??��??�填寫之�??��??�涉�?之個人資�??��??��??��??�用行為?�您?�解此�??��?符�??�人資�?保護法�??��?法�?之�?求�??��??�面?��??�公?��??�、�??��??�用?��??�人資�?之�??��?/p>
+              <p><strong className="text-text-primary block mb-1">二、個人資�??��??�、�??��??�用?��?</strong>?�您使用?�網站�?，本?�司?��?�?��?�者�?求�??�好，以便�?供更好�??��?，�?請您?��?以�??�人資�?：�??�、出?�年?�日?��?��?��?(?�括但�??�於?�話?�碼?�E-MAIL?��?住地?�)?�其他�?以直?��??�接識別?�個人之�??��?並在該特定目?��??�內?��??�利?�您?�個人資�?；�?經您?�面?��?，本?�司不�?將個人資�??�於?��??�途�?/p>
+              <p><strong className="text-text-primary block mb-1">三、第三人使用?�人資�?之�???/strong>?�公?��?不�??��??�交?�、出租�??�售任�??��??�人資�?給其他個人?��?體、�?人�?業�??��?機�?，�??��?律�??��??��?義�??��?不在此�???/p>
+              <p><strong className="text-text-primary block mb-1">?�、cookie 之�???/strong>?�於網�??�部管�?之�?要�??��??�佳個人?��??��??�公?�網站�??�您?�瀏覽?�中寫入 cookies 並�??��??�瀏覽?��? IP 位�??��?網�??�以?�在?��?資�??�閱之次?��??��?網�?流�??�網路�??�調?��?總�??��?，�??��??�個別?�瀏覽?�進�??��???/p>
             </div>
             <div className="mt-8 pt-6 border-t border-gold/20 flex justify-center">
               <button
@@ -330,7 +323,7 @@ export const Contact = () => {
                 onClick={() => setShowPrivacy(false)}
                 className="px-8 py-3 bg-gold text-dark hover:bg-gold/80 transition-colors font-medium tracking-widest"
               >
-                我知道了
+                ?�知?��?
               </button>
             </div>
           </div>
