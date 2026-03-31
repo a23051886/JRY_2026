@@ -116,11 +116,11 @@ export const VisualTour = () => {
           </div>
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {galleryImages.map((img, idx) => (
-              <div key={idx} className="break-inside-avoid group relative border border-gold/20 overflow-hidden bg-dark/50">
+              <div key={idx} className="break-inside-avoid group relative border border-gold/20 overflow-hidden bg-dark/50 aspect-video md:aspect-auto">
                 <img
                   src={img.src}
                   alt={img.caption}
-                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">

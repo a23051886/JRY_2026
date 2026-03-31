@@ -90,15 +90,17 @@ export const Surroundings = () => {
       className="relative min-h-screen w-full py-32 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-dark">
         <div
-          className={`absolute inset-0 transition-opacity duration-700 ${isTransitioning ? 'opacity-0' : 'opacity-100'
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
         >
           <img
             src={activeCategory.image}
             alt={activeCategory.title}
             className="w-full h-full object-cover filter brightness-[1.2] contrast-[1.05]"
+            loading="eager"
+            onLoad={() => setIsTransitioning(false)}
           />
         </div>
         {/* Very light gradient for maximum visibility */}
