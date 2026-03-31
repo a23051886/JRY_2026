@@ -49,7 +49,7 @@ export const Features = () => {
     <section
       ref={sectionRef}
       id="features"
-      className="relative min-h-[100dvh] w-full overflow-hidden bg-dark"
+      className="relative min-h-[100svh] w-full overflow-hidden bg-dark"
     >
       {/* Background image with transition */}
       <div className="absolute inset-0 z-0">
@@ -71,7 +71,7 @@ export const Features = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-[100dvh] flex flex-col justify-center px-6 lg:px-12 py-32">
+      <div className="relative z-10 min-h-[100svh] flex flex-col justify-center px-6 lg:px-12 py-32">
         {/* Section title */}
         <div
           ref={titleInViewRef}

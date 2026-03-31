@@ -65,7 +65,7 @@ export const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative min-h-[100dvh] w-full py-32 overflow-hidden"
+      className="relative min-h-[100svh] w-full py-32 overflow-hidden"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 z-0">

@@ -87,7 +87,7 @@ export const Surroundings = () => {
     <section
       ref={sectionRef}
       id="surroundings"
-      className="relative min-h-[100dvh] w-full py-32 overflow-hidden"
+      className="relative min-h-[100svh] w-full py-32 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-dark">

@@ -59,7 +59,7 @@ export const FloorPlans = () => {
     <section
       ref={sectionRef}
       id="floorplans"
-      className="relative min-h-[100dvh] w-full py-32 overflow-hidden bg-dark"
+      className="relative min-h-[100svh] w-full py-32 overflow-hidden bg-dark"
     >
       {/* Background texture */}
       <div className="absolute inset-0 z-0">
