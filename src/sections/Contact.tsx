@@ -105,7 +105,11 @@ export const Contact = () => {
                   </div>
                   <div>
                     <span className="text-gold/60 text-xs tracking-[0.15em] block mb-1">服務專線</span>
-                    <span className="text-text-primary text-lg">(02) 2236-1566</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <span className="text-text-primary text-lg">(02) 2236-1566</span>
+                      <span className="hidden sm:block text-gold/30">|</span>
+                      <span className="text-text-primary text-lg">0982-311-237</span>
+                    </div>
                   </div>
                 </div>
 
@@ -268,7 +272,7 @@ export const Contact = () => {
                   <Label htmlFor="agree" className="text-text-secondary text-sm cursor-pointer leading-relaxed flex items-center flex-wrap">
                     我已詳閱並同意
                     <button type="button" onClick={() => setShowPrivacy(true)} className="text-gold hover:underline mx-1">隱私權政策</button>
-                    ，同意貴公司收集及使用本人的個人資料。
+                    同意貴公司收集及使用本人的個人資料。
                   </Label>
                 </div>
 

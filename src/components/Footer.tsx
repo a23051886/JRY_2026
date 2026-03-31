@@ -59,7 +59,10 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-text-secondary text-sm">
                 <Phone className="w-4 h-4 text-gold/50" />
-                <span>(02) 2236-1566</span>
+                <div className="flex flex-col gap-1">
+                  <span>(02) 2236-1566</span>
+                  <span>0982-311-237</span>
+                </div>
               </li>
               <li className="flex items-start gap-3 text-text-secondary text-sm">
                 <MapPin className="w-4 h-4 text-gold/50 mt-0.5" />
@@ -74,7 +77,7 @@ export const Footer = () => {
           <p className="text-text-secondary/50 text-xs">
             © 2024 琢樸建設有限公司. All rights reserved. 113建字第0069號
           </p>
-          
+
           <button
             onClick={scrollToTop}
             className="text-gold/50 hover:text-gold transition-colors duration-300 text-sm flex items-center gap-2"
