@@ -19,20 +19,12 @@ function App() {
   useLenis();
 
   useEffect(() => {
-    // GSAP Configuration for mobile stability
-    ScrollTrigger.config({ 
-      ignoreMobileResize: true,
-      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" 
-    });
-
     // Refresh ScrollTrigger on load
     ScrollTrigger.refresh();
 
-    // Handle resize (throttle for desktop, ignore small shifts on mobile)
+    // Handle resize
     const handleResize = () => {
-      if (window.innerWidth > 1024) {
-        ScrollTrigger.refresh();
-      }
+      ScrollTrigger.refresh();
     };
 
     window.addEventListener('resize', handleResize);
@@ -40,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-[100svh] bg-dark text-text-primary overflow-x-hidden">
+    <div className="relative min-h-screen bg-dark text-text-primary overflow-x-hidden">
       {/* Global noise overlay */}
       <div className="fixed inset-0 z-50 pointer-events-none noise-overlay opacity-30" />
       

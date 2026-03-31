@@ -115,7 +115,7 @@ export const Hero = () => {
   };
 
   // Split title into characters
-  const titleChars = '仁�??�璽'.split('');
+  const titleChars = '仁愛玉璽'.split('');
 
   return (
     <section
@@ -136,7 +136,7 @@ export const Hero = () => {
       >
         <img
           src="/images/hero-bg.jpg"
-          alt="仁�??�璽"
+          alt="仁愛玉璽"
           className="w-full h-full object-cover filter brightness-[1.2] contrast-[1.05]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-dark/10 via-transparent to-dark/40" />
@@ -171,7 +171,7 @@ export const Hero = () => {
             ref={subtitleRef}
             className="text-lg sm:text-2xl md:text-3xl text-gold font-serif tracking-[0.3em] mb-4 md:mb-6 overflow-hidden whitespace-nowrap"
           >
-            ?��??�拼 · 大�?之�?
+            獨棟雙拼 · 大安之星
           </p>
 
           {/* Tagline */}
@@ -180,7 +180,7 @@ export const Hero = () => {
             className="flex items-center gap-4 text-text-secondary"
           >
             <span className="w-6 md:w-16 h-px bg-gold/50 block md:hidden" />
-            <span className="text-xs md:text-base tracking-[0.2em] whitespace-nowrap">?�梯?�房 · 訂簽 3%</span>
+            <span className="text-xs md:text-base tracking-[0.2em] whitespace-nowrap">電梯兩房 · 訂簽 3%</span>
             <span className="w-6 md:w-16 h-px bg-gold/50" />
           </div>
         </div>
@@ -195,7 +195,7 @@ export const Hero = () => {
         onClick={scrollToNext}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-gold/70 hover:text-gold transition-colors duration-300 group"
       >
-        <span className="text-xs tracking-[0.2em]">?�索</span>
+        <span className="text-xs tracking-[0.2em]">探索</span>
         <ChevronDown className="w-5 h-5 animate-bounce" />
       </button>
 
