@@ -68,6 +68,13 @@ export const Footer = () => {
                 <MapPin className="w-4 h-4 text-gold/50 mt-0.5" />
                 <span>台北市文山區木柵路一段 83 號一樓</span>
               </li>
+              <li className="flex items-start gap-3 text-text-secondary text-xs opacity-80 pt-2 border-t border-gold/5">
+                <div className="w-4 h-4" /> {/* Spacer to align with icons above */}
+                <span className="leading-relaxed">
+                  安心開發不動產仲介有限公司<br />
+                  黃盛賢 北市經證字第01065號
+                </span>
+              </li>
             </ul>
           </div>
         </div>
