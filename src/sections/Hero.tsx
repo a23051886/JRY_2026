@@ -151,7 +151,7 @@ export const Hero = () => {
         <div className="flex flex-col items-center lg:items-start justify-center w-full max-w-[90vw] mx-auto lg:mx-0">
           <h1
             ref={titleRef}
-            className="font-artistic text-7xl sm:text-7xl md:text-8xl lg:text-[16vw] text-text-primary lg:opacity-10 mb-2 md:mb-8 tracking-tighter preserve-3d"
+            className="font-artistic text-[clamp(3.5rem,16vw,4.5rem)] sm:text-7xl md:text-8xl lg:text-[16vw] text-text-primary lg:opacity-10 mb-2 md:mb-8 tracking-tighter preserve-3d whitespace-nowrap"
           >
             {titleChars.map((char, index) => (
               <span
