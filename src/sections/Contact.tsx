@@ -280,8 +280,8 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={!formData.agree || isSubmitting}
-                  className={`w-full py-4 flex items-center justify-center gap-2 border transition-all duration-500 ${formData.agree
-                    ? 'border-gold text-gold hover:bg-gold hover:text-dark'
+                  className={`w-full py-4 flex items-center justify-center gap-2 border transition-all duration-300 active:scale-[0.99] ${formData.agree
+                    ? 'border-gold text-gold hover:bg-gold hover:text-dark cursor-pointer'
                     : 'border-gold/30 text-gold/30 cursor-not-allowed'
                     }`}
                 >

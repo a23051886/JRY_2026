@@ -86,7 +86,7 @@ export const Navbar = () => {
                 e.preventDefault();
                 scrollToSection('#contact');
               }}
-              className="px-6 py-2 border border-gold/50 text-gold text-sm hover:bg-gold hover:text-dark transition-all duration-300"
+              className="px-6 py-2 border border-gold/50 text-gold text-sm hover:bg-gold hover:text-dark transition-all duration-300 active:scale-95 inline-block cursor-pointer"
             >
               預約賞屋
             </a>
@@ -95,7 +95,7 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-gold p-2"
+            className="lg:hidden text-gold p-2 hover:bg-gold/10 rounded transition-colors duration-200 active:scale-90"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

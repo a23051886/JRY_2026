@@ -91,18 +91,18 @@ export const Features = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`group cursor-pointer transition-all duration-500 ${index === activeIndex
-                  ? 'opacity-100 translate-x-0'
-                  : 'opacity-40 translate-x-4 hover:opacity-60'
+                className={`group cursor-pointer transition-all duration-500 active:scale-[0.98] border-l-2 pl-2 ${index === activeIndex
+                  ? 'opacity-100 translate-x-0 border-gold'
+                  : 'opacity-50 translate-x-2 border-transparent hover:opacity-70 hover:border-gold/40'
                   }`}
                 onClick={() => setActiveIndex(index)}
               >
                 <div className="flex items-start gap-6">
                   <div className={`w-12 h-12 flex items-center justify-center border transition-all duration-300 ${index === activeIndex
                     ? 'border-gold bg-gold/10'
-                    : 'border-gold/30'
+                    : 'border-gold/30 group-hover:border-gold/50'
                     }`}>
-                    <feature.icon className={`w-5 h-5 transition-colors duration-300 ${index === activeIndex ? 'text-gold' : 'text-gold/50'
+                    <feature.icon className={`w-5 h-5 transition-colors duration-300 ${index === activeIndex ? 'text-gold' : 'text-gold/50 group-hover:text-gold/70'
                       }`} />
                   </div>
                   <div className="flex-1">
@@ -122,6 +122,14 @@ export const Features = () => {
                       </p>
                     </div>
                   </div>
+                  {/* Expand hint for non-active items */}
+                  {index !== activeIndex && (
+                    <div className="self-center text-gold/30 group-hover:text-gold/60 transition-colors duration-300 shrink-0">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

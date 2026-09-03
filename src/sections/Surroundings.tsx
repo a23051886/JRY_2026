@@ -150,9 +150,9 @@ export const Surroundings = () => {
                   {/* Category Button */}
                   <button
                     onClick={() => handleCategoryChange(category)}
-                    className={`group relative p-6 text-left border transition-all duration-500 w-full ${category.id === activeCategory.id
+                    className={`group relative p-6 text-left border transition-all duration-500 w-full active:scale-[0.98] ${category.id === activeCategory.id
                       ? 'border-gold bg-dark/90 text-gold'
-                      : 'border-gold/20 hover:border-gold/50 bg-dark/80'
+                      : 'border-gold/20 hover:border-gold/50 bg-dark/80 hover:bg-gold/5'
                       }`}
                   >
                     <div className="flex items-center justify-between lg:block">
@@ -168,8 +168,8 @@ export const Surroundings = () => {
                           </span>
                         </div>
                       </div>
-                      {/* Mobile Expand Indicator */}
-                      <div className={`lg:hidden transition-transform duration-300 ${category.id === activeCategory.id ? 'rotate-180 text-gold' : 'text-gold'}`}>
+                      {/* Mobile Expand Indicator - clearer active vs inactive */}
+                      <div className={`lg:hidden transition-all duration-300 ${category.id === activeCategory.id ? 'rotate-180 text-gold' : 'text-gold/30 group-hover:text-gold/60'}`}>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                       </div>
                     </div>

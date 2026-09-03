@@ -193,7 +193,7 @@ export const Hero = () => {
       {/* Scroll indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-gold/70 hover:text-gold transition-colors duration-300 group"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-gold/70 hover:text-gold hover:scale-110 transition-all duration-300 group"
       >
         <span className="text-xs tracking-[0.2em]">探索</span>
         <ChevronDown className="w-5 h-5 animate-bounce" />

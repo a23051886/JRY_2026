@@ -87,7 +87,7 @@ export const Footer = () => {
 
           <button
             onClick={scrollToTop}
-            className="text-gold/50 hover:text-gold transition-colors duration-300 text-sm flex items-center gap-2"
+            className="text-gold/50 hover:text-gold transition-colors duration-300 text-sm flex items-center gap-2 active:scale-95 cursor-pointer"
           >
             <span>回到頂部</span>
             <svg
