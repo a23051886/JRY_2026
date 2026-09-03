@@ -102,10 +102,10 @@ export const FloorPlans = () => {
                   setActivePlan(plan);
                   setActiveImageIndex(0);
                 }}
-                className={`px-8 py-4 border transition-all duration-300 cursor-pointer active:scale-[0.98] ${
+                className={`px-8 py-4 border transition-all duration-500 ${
                   plan.id === activePlan.id
-                    ? 'border-gold bg-gold/10 text-gold shadow-sm shadow-gold/20'
-                    : 'border-gold/30 text-text-secondary hover:border-gold/60 hover:text-gold/90 hover:bg-gold/5'
+                    ? 'border-gold bg-gold/10 text-gold'
+                    : 'border-gold/30 text-text-secondary hover:border-gold/50'
                 }`}
               >
                 <span className="text-xs tracking-[0.2em] block mb-1">{plan.nameEn}</span>
@@ -140,16 +140,16 @@ export const FloorPlans = () => {
                   <button
                     key={index}
                     onClick={() => setActiveImageIndex(index)}
-                    className={`aspect-square relative overflow-hidden border-2 transition-all duration-300 cursor-pointer active:scale-[0.95] ${
+                    className={`aspect-square relative overflow-hidden border-2 transition-all duration-300 ${
                       index === activeImageIndex
                         ? 'border-gold'
-                        : 'border-transparent hover:border-gold/50 opacity-50 hover:opacity-90'
+                        : 'border-transparent hover:border-gold/50'
                     }`}
                   >
                     <img
                       src={image.src}
                       alt={image.label}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      className="w-full h-full object-cover"
                     />
                   </button>
                 ))}
@@ -225,7 +225,7 @@ export const FloorPlans = () => {
                   e.preventDefault();
                   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="block w-full py-4 text-center border border-gold text-gold hover:bg-gold hover:text-dark transition-all duration-300 active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-gold/20"
+                className="block w-full py-4 text-center border border-gold text-gold hover:bg-gold hover:text-dark transition-all duration-300"
               >
                 預約賞屋
               </a>

@@ -150,32 +150,54 @@ export const Surroundings = () => {
                   {/* Category Button */}
                   <button
                     onClick={() => handleCategoryChange(category)}
-                    className={`group relative p-6 text-left border transition-all duration-500 w-full active:scale-[0.98] ${category.id === activeCategory.id
-                      ? 'border-gold bg-dark/90 text-gold'
-                      : 'border-gold/20 hover:border-gold/50 bg-dark/80 hover:bg-gold/5'
+                    className={`group relative p-5 sm:p-6 text-left border rounded-sm transition-all duration-300 w-full active:scale-[0.98] cursor-pointer ${category.id === activeCategory.id
+                      ? 'border-gold bg-gradient-to-r from-gold/20 via-dark/95 to-dark/90 text-gold shadow-[0_4px_20px_rgba(212,175,55,0.2)]'
+                      : 'border-gold/30 hover:border-gold/60 bg-gradient-to-r from-white/[0.04] to-dark/85 hover:bg-gold/10'
                       }`}
                   >
                     <div className="flex items-center justify-between lg:block">
                       <div className="flex items-center gap-4 lg:block">
-                        <category.icon className={`w-6 h-6 lg:mb-4 transition-colors duration-300 ${category.id === activeCategory.id ? 'text-gold' : 'text-gold/50 group-hover:text-gold/70'
-                          }`} />
+                        <div className={`w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center border transition-all duration-300 rounded-sm lg:mb-4 ${category.id === activeCategory.id
+                          ? 'border-gold bg-gold/20 text-gold shadow-sm shadow-gold/30'
+                          : 'border-gold/30 text-gold/60 group-hover:border-gold/60 group-hover:text-gold'
+                          }`}>
+                          <category.icon className="w-5 h-5 lg:w-6 lg:h-6" />
+                        </div>
                         <div className="lg:block">
                           <span className="text-gold/60 text-[10px] lg:text-xs tracking-[0.15em] block lg:mb-1 uppercase">
                             {category.titleEn}
                           </span>
-                          <span className="font-serif text-lg text-text-primary">
+                          <span className="font-serif text-lg lg:text-xl text-text-primary">
                             {category.title}
                           </span>
                         </div>
                       </div>
-                      {/* Mobile Expand Indicator - clearer active vs inactive */}
-                      <div className={`lg:hidden transition-all duration-300 ${category.id === activeCategory.id ? 'rotate-180 text-gold' : 'text-gold/30 group-hover:text-gold/60'}`}>
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+
+                      {/* Mobile Expand Indicator - Clearly styled button badge */}
+                      <div className="lg:hidden flex items-center gap-2">
+                        {category.id === activeCategory.id ? (
+                          <span className="text-[11px] text-gold font-medium bg-gold/15 px-2 py-0.5 rounded-full border border-gold/40">
+                            已展開
+                          </span>
+                        ) : (
+                          <span className="text-[11px] text-gold/70 group-hover:text-gold bg-white/5 px-2 py-0.5 rounded-full border border-gold/20 flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                            點擊探索
+                          </span>
+                        )}
+                        <div className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${category.id === activeCategory.id
+                          ? 'border-gold bg-gold text-dark rotate-180'
+                          : 'border-gold/30 text-gold/70 group-hover:border-gold group-hover:text-gold'
+                          }`}>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
 
                     {/* Desktop Active indicator */}
-                    <div className={`hidden lg:block absolute bottom-0 left-0 h-0.5 bg-gold transition-all duration-500 ${category.id === activeCategory.id ? 'w-full' : 'w-0'
+                    <div className={`hidden lg:block absolute bottom-0 left-0 h-0.5 bg-gold transition-all duration-500 ${category.id === activeCategory.id ? 'w-full' : 'w-0 group-hover:w-1/3'
                       }`} />
                   </button>
 

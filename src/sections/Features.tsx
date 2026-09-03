@@ -91,45 +91,55 @@ export const Features = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`group cursor-pointer transition-all duration-500 active:scale-[0.98] border-l-2 pl-2 ${index === activeIndex
-                  ? 'opacity-100 translate-x-0 border-gold'
-                  : 'opacity-50 translate-x-2 border-transparent hover:opacity-70 hover:border-gold/40'
+                className={`group cursor-pointer transition-all duration-500 active:scale-[0.98] rounded-sm p-6 border relative ${index === activeIndex
+                  ? 'border-gold bg-gradient-to-r from-gold/15 via-gold/5 to-transparent shadow-[0_0_25px_rgba(212,175,55,0.18)] opacity-100'
+                  : 'border-gold/30 bg-dark/60 hover:border-gold/60 hover:bg-gold/5 opacity-75 hover:opacity-100'
                   }`}
                 onClick={() => setActiveIndex(index)}
               >
-                <div className="flex items-start gap-6">
-                  <div className={`w-12 h-12 flex items-center justify-center border transition-all duration-300 ${index === activeIndex
-                    ? 'border-gold bg-gold/10'
-                    : 'border-gold/30 group-hover:border-gold/50'
-                    }`}>
-                    <feature.icon className={`w-5 h-5 transition-colors duration-300 ${index === activeIndex ? 'text-gold' : 'text-gold/50 group-hover:text-gold/70'
-                      }`} />
-                  </div>
-                  <div className="flex-1">
-                    <span className="text-gold/60 text-xs tracking-[0.2em] block mb-1">
-                      {feature.subtitle}
+                {/* Visual click affordance badge */}
+                <div className="absolute top-4 right-4 flex items-center gap-1.5 text-xs">
+                  {index === activeIndex ? (
+                    <span className="text-gold font-medium bg-gold/20 border border-gold/40 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                      展開中
                     </span>
-                    <h3 className="font-serif text-2xl text-text-primary mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-text-secondary text-sm mb-3">
-                      {feature.description}
-                    </p>
-                    <div className={`overflow-hidden transition-all duration-500 ${index === activeIndex ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  ) : (
+                    <span className="text-gold/70 group-hover:text-gold bg-white/5 group-hover:bg-gold/15 border border-gold/30 px-2.5 py-0.5 rounded-full flex items-center gap-1 transition-all duration-300">
+                      點擊查看詳情
+                      <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex items-start gap-5 pt-1">
+                  <div className={`w-12 h-12 flex items-center justify-center border transition-all duration-300 shrink-0 ${index === activeIndex
+                    ? 'border-gold bg-gold/20 text-gold shadow-sm shadow-gold/30'
+                    : 'border-gold/30 text-gold/60 group-hover:border-gold/60 group-hover:text-gold'
+                    }`}>
+                    <feature.icon className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="pr-24 sm:pr-28">
+                      <span className="text-gold/70 text-xs tracking-[0.2em] block mb-1">
+                        {feature.subtitle}
+                      </span>
+                      <h3 className="font-serif text-2xl text-text-primary mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-text-secondary text-sm mb-3 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className={`overflow-hidden transition-all duration-500 ease-out ${index === activeIndex ? 'max-h-[500px] opacity-100 pt-3 mt-1 border-t border-gold/20' : 'max-h-0 opacity-0'
                       }`}>
-                      <p className="text-text-secondary/80 text-sm leading-relaxed">
+                      <p className="text-text-secondary/90 text-sm leading-relaxed pb-1">
                         {feature.details}
                       </p>
                     </div>
                   </div>
-                  {/* Expand hint for non-active items */}
-                  {index !== activeIndex && (
-                    <div className="self-center text-gold/30 group-hover:text-gold/60 transition-colors duration-300 shrink-0">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
